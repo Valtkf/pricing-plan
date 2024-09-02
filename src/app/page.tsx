@@ -32,9 +32,12 @@ export default function Home() {
             }`}
             onClick={() => handleClick("yearly")}
           >
-            Paiement Annuel
+            Paiement Annuel (-20%)
           </button>
         </div>
+      </div>
+      <div className="">
+        <div></div>
       </div>
     </main>
   );
