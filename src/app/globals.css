@@ -26,6 +26,30 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.hover-gradient {
+  background-image: radial-gradient(
+    51.41% 105.14% at 50.04% 105.14%,
+    #0a308b 0%,
+    #1e6efb 100%
+  );
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(
+    51.41% 105.14% at 50.04% 105.14%,
+    #0a308b 0%,
+    #1e6efb 100%
+  );
+}
+
+.hover\:bg-radial-gradient:hover {
+  background: radial-gradient(
+    51.41% 105.14% at 50.04% 105.14%,
+    #0a308b 0%,
+    #1e6efb 100%
+  );
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
