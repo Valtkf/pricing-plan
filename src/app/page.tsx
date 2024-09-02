@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { PriceCard } from "@/components/ui/PriceCard";
+import { data } from "@/components/ui/data";
 
 export default function Home() {
   const [isClick, setIsClick] = useState<string>("");
@@ -36,8 +38,18 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="">
-        <div></div>
+      <div className="flex justify-center flex-row items-center flex-wrap gap-x-2">
+        {data.offers.map((offer) => (
+          <PriceCard
+            key={offer.id}
+            title={offer.title}
+            pricemonthly={offer.pricemonthly}
+            priceyearly={offer.priceyearly}
+            options={offer.options}
+            isUltime={offer.title === "Ultime"}
+            isYearly={isClick === "yearly"}
+          />
+        ))}
       </div>
     </main>
   );
