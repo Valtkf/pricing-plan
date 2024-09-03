@@ -84,7 +84,7 @@ export function PriceCard({
             )}
             onClick={handleClick}
           >
-            Je m'abonne
+            Je m&apos;abonne
           </button>
         </CardFooter>
       </div>
