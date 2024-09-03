@@ -32,12 +32,64 @@
   );
 }
 
+.text-gradient {
+  background: radial-gradient(
+    51.41% 105.14% at 50.04% 105.14%,
+    #0a308b 0%,
+    #1e6efb 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Rend le texte transparent pour montrer le dégradé */
+}
+/* styles.css */
+
 .hover\:bg-radial-gradient:hover {
   background: radial-gradient(
     51.41% 105.14% at 50.04% 105.14%,
     #0a308b 0%,
     #1e6efb 100%
   );
+}
+
+.text-month {
+  font-size: 14px; /* Ajustez la taille selon vos besoins */
+}
+
+.text-year {
+  font-size: 14px;
+}
+.text-sm {
+  font-size: 14px; /* Ajustez la taille selon vos besoins */
+}
+
+.card-ultime {
+  background-image: url("../components/ui/icon/primary-card-bg.png"); /* Chemin vers l'image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* styles.css */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 40;
+  width: 80%;
+  height: 1px; /* Épaisseur de la bordure */
+  background: linear-gradient(
+    to right,
+    transparent,
+    #fff 60%,
+    #fff 60%,
+    transparent
+  );
+  z-index: 1;
 }
 
 @layer utilities {

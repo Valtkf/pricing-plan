@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { PriceCard } from "@/components/ui/PriceCard";
+import { data } from "@/components/ui/data";
 
 export default function Home() {
   const [isClick, setIsClick] = useState<string>("");
@@ -15,9 +17,11 @@ export default function Home() {
         <button className="border-[1px] border-[#97BAFF66] bg-[#041642] w-[150px] h-[36px] rounded-3xl text-sm text-[#97BAFF66]">
           Nos offres
         </button>
-        <h1 className="text-4xl font-bold mt-4">Des prix en accord avec</h1>
-        <h1 className="text-4xl font-bold mt-4"> notre vision</h1>
-        <div className="flex flex-row text-white gap-x-4 mt-4">
+        <h1 className="text-4xl font-bold mt-4 text-white">
+          Des prix en accord avec
+        </h1>
+        <h1 className="text-4xl font-bold mt-4 text-gradient"> notre vision</h1>
+        <div className="flex flex-row text-white gap-x-4 mt-10">
           <button
             className={`border-[1px] border-white rounded-[10px] w-[275px] h-[45px] ${
               isClick === "monthly" ? "bg-radial-gradient" : ""
@@ -36,8 +40,18 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="">
-        <div></div>
+      <div className="flex justify-center flex-row items-center flex-wrap gap-x-2">
+        {data.offers.map((offer) => (
+          <PriceCard
+            key={offer.id}
+            title={offer.title}
+            pricemonthly={offer.pricemonthly}
+            priceyearly={offer.priceyearly}
+            options={offer.options}
+            isUltime={offer.title === "Ultime"}
+            isYearly={isClick === "yearly"}
+          />
+        ))}
       </div>
     </main>
   );
