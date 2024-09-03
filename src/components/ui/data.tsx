@@ -4,7 +4,7 @@ const offers = [
     imageSource: "",
     title: "Essentiel",
     pricemonthly: "$179",
-    priceyearly: "$1718,4",
+    priceyearly: "$143",
     options: [
       "+2500 vues/mois",
       "+60 clics sur votre site",
@@ -18,7 +18,7 @@ const offers = [
     imageSource: "",
     title: "Ultime",
     pricemonthly: "$439",
-    priceyearly: "$4214,4",
+    priceyearly: "$351",
     options: [
       "+6500 vues/mois",
       "+200 clics sur votre site",
@@ -35,7 +35,7 @@ const offers = [
     imageSource: "",
     title: "Premium",
     pricemonthly: "$319",
-    priceyearly: "$3062,4",
+    priceyearly: "$255",
     options: [
       "+11000 vues/mois",
       "+500 clics sur votre site",

@@ -5,15 +5,17 @@ import { cn } from "@/lib/utils";
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+>(({ className, children, ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
-      "rounded-[21px] border bg-card text-card-foreground shadow text-start",
+      " relative rounded-[21px] text-card-foreground shadow text-start overflow-hidden bg-[radial-gradient(103.02%_79.39%_at_50.04%_100%,rgba(3,25,83,1)_0%,rgba(23,112,247,1)_120%)]",
       className
     )}
     {...props}
-  />
+  >
+    <div className="relative z-10">{children}</div>
+  </div>
 ));
 Card.displayName = "Card";
 
@@ -47,7 +49,10 @@ const CardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
+    className={cn(
+      " text-sm text-muted-foreground", // Ajoutez la classe CSS ici
+      className
+    )}
     {...props}
   />
 ));
@@ -57,7 +62,7 @@ const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+  <div ref={ref} className={cn(" p-4", className)} {...props} />
 ));
 CardContent.displayName = "CardContent";
 
